@@ -34,6 +34,14 @@ const navItems = [
       { label: "General Resources", href: "/general-resources" },
     ],
   },
+  {
+    label: "Products",
+    children: [
+      { label: "Board Game", href: "/bambi-board-game.pdf", target: "_blank" },
+      { label: "Story Book", href: "/chimamanda-story-book.pdf", target: "_blank" },
+      { label: "Flashcards", href: "/flashcards.pdf", target: "_blank" },
+    ],
+  },
   { label: "Research", href: "/research" },
   { label: "About Us", href: "/about-us" },
 ];
@@ -106,16 +114,29 @@ export default function Navbar() {
 
                   {openMenu === item.label && (
                     <div className="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 min-w-[240px] z-50">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-2.5 text-sm font-inter text-gray-700 hover:text-[#00294B] hover:bg-gray-50 transition-colors"
-                          onClick={() => setOpenMenu(null)}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      {item.children.map((child) =>
+                        "target" in child ? (
+                          <a
+                            key={child.href}
+                            href={child.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-4 py-2.5 text-sm font-inter text-gray-700 hover:text-[#00294B] hover:bg-gray-50 transition-colors"
+                            onClick={() => setOpenMenu(null)}
+                          >
+                            {child.label}
+                          </a>
+                        ) : (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="block px-4 py-2.5 text-sm font-inter text-gray-700 hover:text-[#00294B] hover:bg-gray-50 transition-colors"
+                            onClick={() => setOpenMenu(null)}
+                          >
+                            {child.label}
+                          </Link>
+                        )
+                      )}
                     </div>
                   )}
                 </div>
@@ -206,16 +227,29 @@ export default function Navbar() {
                   </button>
                   {mobileExpanded === item.label && (
                     <div className="ml-3 mt-1 border-l border-white/10 pl-3 space-y-0.5">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-3 py-2.5 text-sm font-inter text-white/60 hover:text-[#61CE70] rounded-md hover:bg-white/5 transition-colors"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                      {item.children.map((child) =>
+                        "target" in child ? (
+                          <a
+                            key={child.href}
+                            href={child.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-3 py-2.5 text-sm font-inter text-white/60 hover:text-[#61CE70] rounded-md hover:bg-white/5 transition-colors"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {child.label}
+                          </a>
+                        ) : (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="block px-3 py-2.5 text-sm font-inter text-white/60 hover:text-[#61CE70] rounded-md hover:bg-white/5 transition-colors"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {child.label}
+                          </Link>
+                        )
+                      )}
                     </div>
                   )}
                 </div>
