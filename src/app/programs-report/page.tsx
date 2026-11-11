@@ -50,6 +50,35 @@ export default function ProgramsReportPage() {
         bgTo="to-gray-950"
       />
 
+      {/* Programs PDF Download */}
+      <section className="py-10 bg-gradient-to-b from-slate-900 to-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-7 flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+            <div className="shrink-0 w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
+              <svg className="w-7 h-7 text-[#00294B]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+              </svg>
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-nouvelr font-bold text-[#00294B] text-lg mb-1">Virtually Safe Programs Overview</h3>
+              <p className="text-gray-500 font-lato text-sm leading-relaxed">
+                A structured overview of Virtually Safe&apos;s core programmes — covering our mission-driven initiatives in schools, communities, and policy spaces. Includes programme descriptions, target audiences, and the approach we take to building a safer internet for young Nigerians.
+              </p>
+            </div>
+            <a
+              href="/virtually-safe-programs.pdf"
+              download
+              className="shrink-0 flex items-center gap-2 bg-[#61CE70] hover:bg-[#4db85b] text-[#00294B] text-sm font-bold font-lato py-3 px-6 rounded-xl transition-colors whitespace-nowrap"
+            >
+              <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
 
