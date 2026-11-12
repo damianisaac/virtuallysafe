@@ -67,7 +67,8 @@ export default function ProgramsReportPage() {
             </div>
             <a
               href="/virtually-safe-programs.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="shrink-0 flex items-center gap-2 bg-[#61CE70] hover:bg-[#4db85b] text-[#00294B] text-sm font-bold font-lato py-3 px-6 rounded-xl transition-colors whitespace-nowrap"
             >
               <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -176,7 +177,8 @@ export default function ProgramsReportPage() {
             </div>
             <a
               href="/programs-report.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="shrink-0 flex items-center gap-2 bg-[#00294B] hover:bg-[#003a69] text-white text-sm font-bold font-lato py-2.5 px-5 rounded-xl transition-colors whitespace-nowrap"
             >
               <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

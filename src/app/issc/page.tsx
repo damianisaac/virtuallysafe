@@ -208,7 +208,8 @@ export default function ISSCPage() {
                   <p className="text-gray-500 font-lato text-sm leading-relaxed flex-1 mb-5">{doc.desc}</p>
                   <a
                     href={doc.file}
-                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 bg-[#00294B] hover:bg-[#003a69] text-white text-sm font-bold font-lato py-2.5 px-4 rounded-xl transition-colors"
                   >
                     <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
